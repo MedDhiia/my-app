@@ -17,15 +17,19 @@ export class AppComponent {
       (persons: any) => {
         this.persons = persons ;
       }
-  );
+    );
   }
 
   deletePerson(index: number) {
     this.persons.splice(index, 1);
   }
 
-  showPerson(index: number) {
-    this.selectedPerson = this.persons[index];
+  showPerson(id: number) {
+    this.personService.getOnePerson(id).subscribe(
+      (person: any) => {
+        this.selectedPerson =  person ;
+      }
+    );
   }
 
   clickedPerson(person: Person){

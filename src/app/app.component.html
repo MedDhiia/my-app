@@ -1,10 +1,13 @@
 <table>
-  <tr><th>Firstname</th><th>Lastname</th><th>Actions</th></tr>
+  <tr><th>Full Name</th><th>Username</th><th>Email</th></tr>
   <tr *ngFor="let person of persons; let i=index;">
     <td>{{ person.name }}</td>
+    <td>{{ person.username }}</td>
+    <td>{{ person.email }}</td>
+    <td>{{ person.company.name }}</td>
     <td>
       <button (click)="deletePerson(i)">Delete</button>
-      <button (click)="showPerson(i)">Show</button>
+      <button (click)="showPerson(person.id)">Show</button>
     </td>
   </tr>
 </table>
