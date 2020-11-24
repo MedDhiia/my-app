@@ -8,6 +8,7 @@ import { PersonService } from './services/person.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   selectedPerson ?: Person;
   persons:Array<Person> = [];
   keyword :string;
