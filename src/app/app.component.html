@@ -1,12 +1,2 @@
-<table>
-  <tr><th>Firstname</th><th>Lastname</th><th>Actions</th></tr>
-  <tr *ngFor="let person of persons; let i=index;">
-    <td>{{ person.firstname }}</td>
-    <td>{{ person.lastname }}</td>
-    <td>
-      <button (click)="deletePerson(i)">Delete</button>
-      <button (click)="showPerson(i)">Show</button>
-    </td>
-  </tr>
-</table>
-<app-detail [person]="selectedPerson" (clickedPerson)="clickedPerson($event)"></app-detail>
+<br />
+<router-outlet></router-outlet>

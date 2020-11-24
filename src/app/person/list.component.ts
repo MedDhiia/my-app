@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { Person } from './models/all.model';
-import { PersonService } from './services/person.service';
+import { Person } from '../models/all.model';
+import { PersonService } from '../services/person.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'person-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.css']
 })
-export class AppComponent {
+export class PersonListComponent {
   selectedPerson ?: Person;
   persons:Array<Person> = [];
   keyword :string;
