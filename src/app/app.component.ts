@@ -11,6 +11,7 @@ export class AppComponent {
   
   selectedPerson ?: Person;
   persons:Array<Person> = [] ;
+  keyword: string ;
 
   constructor(private personService: PersonService){
     personService.getPersons().subscribe(
@@ -34,5 +35,14 @@ export class AppComponent {
 
   clickedPerson(person: Person){
     console.log(person);
+  }
+
+  searchPerson(){
+    console.log(this.keyword);
+    this.personService.getPersons(this.keyword?{username: this.keyword}:{}).subscribe(
+      (person: any) => {
+        this.persons =  person ;
+      }
+    );
   }
 }

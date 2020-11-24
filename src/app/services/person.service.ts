@@ -9,9 +9,9 @@ export class PersonService {
 
   constructor(private http: HttpClient) { }
   
-  getPersons() {
+  getPersons(params?: any) {
     return this
-      .http.get("https://jsonplaceholder.typicode.com/users");
+      .http.get("https://jsonplaceholder.typicode.com/users", {params: params});
   }
 
   getOnePerson(id: number){

@@ -1,3 +1,5 @@
+<input type="text" (input)="searchPerson()" [(ngModel)]="keyword">
+<button (click) = "searchPerson()"> Recherche </button>
 <table>
   <tr><th>Full Name</th><th>Username</th><th>Email</th></tr>
   <tr *ngFor="let person of persons; let i=index;">
