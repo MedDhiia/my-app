@@ -1,8 +1,7 @@
 <div *ngIf="person">
     <h2>Selected Person</h2>
     <ul>
-        <li>firstname: {{ person.firstname }}</li>
-        <li>lastname: {{ person.lastname }}</li>
+        {{ person.email }}
         <li><button (click)="notifyParent()">Notifier parent component</button></li>
     </ul>
 </div>

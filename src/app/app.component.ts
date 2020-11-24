@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Person } from './models/person.model';
+import { Person } from './models/all.model';
 import { PersonService } from './services/person.service';
 
 @Component({
@@ -13,7 +13,11 @@ export class AppComponent {
   persons:Array<Person> = [] ;
 
   constructor(private personService: PersonService){
-    this.persons = personService.getPersons();
+    personService.getPersons().subscribe(
+      (persons: any) => {
+        this.persons = persons ;
+      }
+  );
   }
 
   deletePerson(index: number) {
