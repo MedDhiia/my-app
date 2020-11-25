@@ -12,6 +12,10 @@ import { PersonCreateComponent } from './person/person-create/person-create.comp
 import { PersonEditComponent } from './person/person-edit/person-edit.component';
 import { SpinnerComponent } from './util/spinner/spinner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
