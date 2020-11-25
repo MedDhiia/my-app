@@ -7,6 +7,5 @@
     <button type="button" [disabled]="!form.valid"> Modfier </button>
   </div>
 </form>
-<div *ngIf="isLoading">
 
-</div>
+<app-spinner *ngIf="isLoading"></app-spinner>

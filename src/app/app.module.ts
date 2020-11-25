@@ -10,6 +10,7 @@ import { PersonListComponent } from './person/list.component';
 import { RouterModule } from '@angular/router';
 import { PersonCreateComponent } from './person/person-create/person-create.component';
 import { PersonEditComponent } from './person/person-edit/person-edit.component';
+import { SpinnerComponent } from './util/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PersonEditComponent } from './person/person-edit/person-edit.component'
     PersonDetailComponent,
     PersonListComponent,
     PersonCreateComponent,
-    PersonEditComponent
+    PersonEditComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
