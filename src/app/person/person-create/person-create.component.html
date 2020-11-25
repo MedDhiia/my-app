@@ -1,0 +1,9 @@
+<h1> Ajouter une personne </h1>
+<form [formGroup]="form">
+  <div>
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="username">
+    <input type="text" formControlName="email">
+    <button type="button" (click)="submitForm()"> Ajouter </button>
+  </div>
+</form>

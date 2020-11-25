@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PersonDetailComponent } from './person/detail.component';
 import { PersonListComponent } from './person/list.component';
+import { PersonCreateComponent } from './person/person-create/person-create.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,9 @@ const routes: Routes = [
   },
   {
     path: 'persons/:id', component: PersonDetailComponent
+  },
+  {
+    path: 'create', component: PersonCreateComponent
   }
 ];
 
