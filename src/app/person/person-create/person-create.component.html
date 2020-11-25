@@ -1,9 +1,9 @@
 <h1> Ajouter une personne </h1>
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="submitForm()">
   <div>
     <input type="text" formControlName="name">
     <input type="text" formControlName="username">
     <input type="text" formControlName="email">
-    <button type="button" (click)="submitForm()"> Ajouter </button>
+    <button type="button" [disabled]="!form.valid"> Ajouter </button>
   </div>
 </form>
