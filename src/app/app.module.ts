@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { PersonCreateComponent } from './person/person-create/person-create.component';
 import { PersonEditComponent } from './person/person-edit/person-edit.component';
 import { SpinnerComponent } from './util/spinner/spinner.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SpinnerComponent } from './util/spinner/spinner.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
