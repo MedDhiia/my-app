@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { PersonDetailComponent } from './person/detail.component';
 import { PersonListComponent } from './person/list.component';
 import { PersonCreateComponent } from './person/person-create/person-create.component';
+import { PersonEditComponent } from './person/person-edit/person-edit.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'create', component: PersonCreateComponent
+  },
+  {
+    path: 'edit/:id', component: PersonEditComponent
   }
 ];
 

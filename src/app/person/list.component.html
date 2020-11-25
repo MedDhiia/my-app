@@ -2,13 +2,20 @@
 <input type="text" (input)="search()" [(ngModel)]="keyword" />
 <button (click)="search()">Recherche</button>
 <table>
-  <tr><th>Name</th><th>Username</th><th>Email</th><th>Comapny</th><th>Actions</th></tr>
+  <tr>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Comapny</th>
+    <th>Actions</th>
+  </tr>
   <tr *ngFor="let person of persons; let i=index;">
     <td>{{ person.name }}</td>
     <td>{{ person.username }}</td>
     <td>{{ person.email }}</td>
     <td>{{ person.company.name }}</td>
     <td>
+      <button [routerLink]="['edit/', person.id]">Edit</button>
       <button (click)="deletePerson(person.id)">Delete</button>
       <button [routerLink]="['persons/', person.id]">Détail</button>
     </td>

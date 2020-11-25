@@ -1,0 +1,12 @@
+<h1> Editer une personne </h1>
+<form [formGroup]="form" *ngIf="!isLoading">
+  <div>
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="username">
+    <input type="text" formControlName="email">
+    <button type="button" [disabled]="!form.valid"> Modfier </button>
+  </div>
+</form>
+<div *ngIf="isLoading">
+
+</div>

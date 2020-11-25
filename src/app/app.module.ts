@@ -9,13 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PersonListComponent } from './person/list.component';
 import { RouterModule } from '@angular/router';
 import { PersonCreateComponent } from './person/person-create/person-create.component';
+import { PersonEditComponent } from './person/person-edit/person-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonDetailComponent,
     PersonListComponent,
-    PersonCreateComponent
+    PersonCreateComponent,
+    PersonEditComponent
   ],
   imports: [
     BrowserModule,
