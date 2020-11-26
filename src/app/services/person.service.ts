@@ -28,4 +28,9 @@ export class PersonService {
     return this
       .http.post(this.baseUrl + "/users/create", person);
   }
+
+  editPerson(person: Person, id: number) {
+    return this
+      .http.put(this.baseUrl + "/users/edit/" + id, person);
+  }
 }

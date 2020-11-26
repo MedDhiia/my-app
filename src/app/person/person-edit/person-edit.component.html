@@ -1,11 +1,12 @@
 <h1> Editer une personne </h1>
-<form [formGroup]="form" *ngIf="!isLoading">
+<form [formGroup]="form" (ngSubmit)="clickSubmit()" *ngIf="!isLoading">
   <div>
-    <input type="text" formControlName="name">
-    <input type="text" formControlName="username">
+    <input type="text" formControlName="firstname">
+    <input type="text" formControlName="lastname">
     <input type="text" formControlName="email">
-    <button type="button" [disabled]="!form.valid"> Modfier </button>
+    <input type="text" formControlName="plainPassword">
+    <button type="submit" [disabled]="!form.valid"> Modifier </button>
   </div>
 </form>
 
-<app-spinner *ngIf="isLoading"></app-spinner>
+<!-- <app-spinner *ngIf="isLoading"></app-spinner> -->
