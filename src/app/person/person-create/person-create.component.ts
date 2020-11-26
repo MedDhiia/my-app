@@ -12,9 +12,10 @@ export class PersonCreateComponent implements OnInit {
   constructor(private personService: PersonService) { }
 
   form = new FormGroup({
-    name: new FormControl(null, Validators.required),
-    username: new FormControl(null, Validators.required),
+    firstname: new FormControl(null, Validators.required),
+    lastname: new FormControl(null, Validators.required),
     email: new FormControl(null, [Validators.email, Validators.required]),
+    plainPassword: new FormControl(null, Validators.required),
   });
 
   ngOnInit(): void {
