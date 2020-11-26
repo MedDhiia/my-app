@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { PersonService } from '../../services/person.service';
 
 @Component({
   selector: 'app-person-create',
@@ -8,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class PersonCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private personService: PersonService) { }
 
   form = new FormGroup({
     name: new FormControl(null, Validators.required),
@@ -23,6 +24,7 @@ export class PersonCreateComponent implements OnInit {
     console.log(
       this.form.value
     );
+    this.personService.createPerson(this.form.value).subscribe(() => { });
   }
 
 }
