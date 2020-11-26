@@ -22,6 +22,15 @@
     <td mat-cell *matCellDef="let element"> {{element.email}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> actions </th>
+    <td mat-cell *matCellDef="let person">
+      <button (click)="deletePerson(person.id)">Delete</button>
+      <button [routerLink]="['persons/', person.id]">Détail</button>
+      <button [routerLink]="['persons/edit/', person.id]">edit</button>
+    </td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

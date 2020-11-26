@@ -14,7 +14,7 @@ export class PersonListComponent {
   persons: Array<Person> = [];
   keyword: string;
 
-  displayedColumns: string[] = ['username', 'firstname', 'email'];
+  displayedColumns: string[] = ['username', 'firstname', 'email', 'actions'];
   dataSource;
 
   constructor(private personService: PersonService) {
