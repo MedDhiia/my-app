@@ -5,6 +5,7 @@ import { PersonDetailComponent } from './person/detail.component';
 import { PersonListComponent } from './person/list.component';
 import { PersonCreateComponent } from './person/person-create/person-create.component';
 import { PersonEditComponent } from './person/person-edit/person-edit.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,9 @@ const routes: Routes = [
   },
   {
     path: 'edit/:id', component: PersonEditComponent
+  },
+  {
+    path: 'signin', component: SigninComponent
   }
 ];
 

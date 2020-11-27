@@ -2,35 +2,42 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Person } from '../models/all.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class PersonService {
-  baseUrl: string = environment.baseUrl;
+  apiUrl: string = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
   getPersons(params?: any) {
     return this
-      .http.get(this.baseUrl + "/users", { params: params })
+      .http.get(this.apiUrl + "/users", { params: params })
       ;
   }
 
   getOnePerson(id: number) {
     return this
-      .http.get(this.baseUrl + "/users/" + id)
+      .http.get(this.apiUrl + "/users/" + id)
       ;
   }
 
   createPerson(person: Person) {
     return this
-      .http.post(this.baseUrl + "/users/create", person);
+      .http.post(this.apiUrl + "/users/create", person);
   }
 
   editPerson(person: Person, id: number) {
     return this
-      .http.put(this.baseUrl + "/users/edit/" + id, person);
+      .http.put(this.apiUrl + "/users/edit/" + id, person);
   }
+
+  deletePerson(id: number) {
+    return this.http.delete(this.apiUrl + "/users/delete/" + id);
+
+  }
+
 }

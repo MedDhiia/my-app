@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://transtu.formation/index.php/api'
+  baseUrl: 'http://transtu.formation/index.php',
+  apiUrl: 'http://transtu.formation/index.php/api'
 };
 
 /*

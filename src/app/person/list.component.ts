@@ -33,8 +33,18 @@ export class PersonListComponent {
       });
   }
 
-  deletePerson(index: number) {
-    this.persons.splice(index, 1);
+
+  deletePerson(id: number) {
+    let persons = this.persons.slice();
+
+    let index: number = persons.findIndex((person: any) => {
+      return person.id == id;
+    });
+
+    this.personService.deletePerson(id).subscribe((person: any) => {
+      persons.splice(index, 1);
+      this.persons = persons;
+    });
   }
 
   showPerson(id: number) {

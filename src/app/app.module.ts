@@ -13,6 +13,7 @@ import { PersonEditComponent } from './person/person-edit/person-edit.component'
 import { SpinnerComponent } from './util/spinner/spinner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { SigninComponent } from './signin/signin.component';
 
 
 
@@ -24,7 +25,8 @@ import { MatTableModule } from '@angular/material/table';
     PersonListComponent,
     PersonCreateComponent,
     PersonEditComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

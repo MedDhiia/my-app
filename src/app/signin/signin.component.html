@@ -1,0 +1,8 @@
+<h1> s'authentifier </h1>
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <div>
+    <input type="text" formControlName="email">
+    <input type="text" formControlName="password">
+    <button type="submit" [disabled]="!form.valid"> entrer </button>
+  </div>
+</form>
