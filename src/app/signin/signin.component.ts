@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'app-signin',
@@ -9,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private authservice: AuthService) { }
+  constructor(private authservice: AuthService, private sessionService: SessionService, private router: Router) { }
   form = new FormGroup({
     email: new FormControl(null, Validators.required),
     password: new FormControl(null, Validators.required),
@@ -25,7 +27,9 @@ export class SigninComponent implements OnInit {
       this.form.value
     );
     this.authservice.signin(this.form.value).subscribe((person: any) => {
-      localStorage.setItem('user', JSON.stringify(person));
+      // localStorage.setItem('user', JSON.stringify(person));
+      this.sessionService.setUser(person);
+      this.router.navigate([""]);
     });
   }
 }
